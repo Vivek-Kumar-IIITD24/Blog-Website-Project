@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                display: flex;
+                justify-content: center;
+                
+                width: 100vw;
+                height: 100vh;
+                box-sizing: border-box;
+                background: linear-gradient(135deg, #c9d6ff, #e2e2e2);
+
+            }
+            .container{
+                display: flex;
+                flex-direction: column;
+                overflow: auto;
+                gap: 30px;;
+                width: 80%;
+                padding: 20px;
+               background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+
+
+                box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.356);
+            }
+            .header{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap:20px;
+                
+            }
+            .header p{
+                width: 60% ;
+            }
+
+            .grid{
+                display: grid;
+                /* grid-template-columns: repeat(4,1fr);
+                grid-template-rows: repeat(2,1fr); */
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                padding-left: 10px;
+                
+                gap:20px;
+            }
+            .card1{
+                display: flex;
+                flex-direction: column;
+                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                border-radius: 7px;
+                gap: 13px;
+                height: 330px;
+                background-color: white;
+
+            }
+            .card1 img{
+                width: 100%;
+                height: 165px;
+                border-top-left-radius: 7px;
+                border-top-right-radius:7px ;
+                overflow: auto;
+                transition: all 03s linear 0s ;
+            }
+
+            .card1 img:hover{
+                transform: scale(1.2);
+                transition: all 0.6s 0s linear;
+            }
+
+            .card2{
+                display: flex;
+                flex-direction: column;
+                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                border-radius: 7px;
+                gap: 13px;
+                height: 330px;
+                background-color: white;
+            }
+            .card2 img{
+                width: 100%;
+                height: 165px;
+                border-top-left-radius: 7px;
+                border-top-right-radius:7px ;
+                overflow: auto;
+                transition: all 03s linear 0s ;
+            }
+
+            .card2 img:hover{
+                transform: scale(1.2);
+                transition: all 0.6s 0s linear;
+            }
+
+            .card3{
+                display: flex;
+                flex-direction: column;
+                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                border-radius: 7px;
+                gap: 11px;
+                height: 330px;
+                background-color: white;
+            }
+            
+            .text3{
+                display: flex;
+                flex-direction: column;
+                padding-left: 10px;
+                gap:10px;
+            }
+
+            .card3 img{
+                width: 100%;
+                height: 165px;
+                border-top-left-radius: 7px;
+                border-top-right-radius:7px ;
+                overflow: auto;
+                transition: all 03s linear 0s ;
+            }
+            .card3 img:hover{
+                transform: scale(1.2);
+                transition: all 0.6s 0s linear;
+            }
+
+            .card4{
+                display: flex;
+                flex-direction: column;
+                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                border-radius: 7px;
+                gap: 13px;
+                height: 330px;
+                background-color: white;
+            }
+            .cardbottom4-right{
+                
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+                 padding: 5px;
+            }
+            .card4 img{
+                width: 100%;
+                height: 165px;
+                border-top-left-radius: 7px;
+                border-top-right-radius:7px ;
+                overflow: auto;
+                 transition: all 03s linear 0s ;
+            }
+
+            .card4 img:hover{
+                transform: scale(1.2);
+                transition: all 0.6s 0s linear;
+            }
+            .card5{
+                display: flex;
+                flex-direction: column;
+                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                border-radius: 7px;
+                gap: 13px;
+                height: 330px;
+                background-color: white;
+            }
+            .card5 img{
+                width: 100%;
+                height: 165px;
+                border-top-left-radius: 7px;
+                border-top-right-radius:7px ;
+                overflow: auto;
+                 transition: all 03s linear 0s ;
+            }
+            .card5 img:hover{
+                transform: scale(1.2);
+                transition: all 0.6s 0s linear;
+            }
+            
+
+
+            .card6{
+                display: flex;
+                flex-direction: column;
+                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                border-radius: 7px;
+                gap: 13px;
+                height: 330px;
+                background-color: white;
+            }
+            .card6 img{
+                width: 100%;
+                height: 165px;
+                border-top-left-radius: 7px;
+                border-top-right-radius:7px ;
+                overflow: auto;
+                 transition: all 03s linear 0s ;
+            }
+            .card6 img:hover{
+                transform: scale(1.2);
+                transition: all 0.6s 0s linear;
+            }
+            .card7{
+                display: flex;
+                flex-direction: column;
+                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                border-radius: 7px;
+                gap: 13px;
+                height: 330px;
+                background-color: white;
+            }
+            .card7 img{
+                width: 100%;
+                height: 165px;
+                border-top-left-radius: 7px;
+                border-top-right-radius:7px ;
+                overflow: auto;
+                 transition: all 03s linear 0s ;
+            }
+
+            .card7 img:hover{
+                transform: scale(1.2);
+                transition: all 0.6s 0s linear;
+            }
+            .card8{
+                display: flex;
+                flex-direction: column;
+                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                border-radius: 7px;
+                gap: 13px;
+                height: 330px;
+                background-color: white;
+            }
+            .card8 img{
+                width: 100%;
+                height: 165px;
+                border-top-left-radius: 7px;
+                border-top-right-radius:7px ;
+                overflow: auto;
+                 transition: all 03s linear 0s ;
+            }
+            .card8 img:hover{
+                transform: scale(1.2);
+                transition: all 0.6s 0s linear;
+            }
+            .text{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding-left: 15px;
+                
+            }
+            .text p{
+                font-size: 15px;
+            }
+            .cardbottom{
+                display: flex;
+                gap: 10px;
+                justify-content: space-around;
+                align-items: center;
+                padding-right: 20px;
+
+
+            }
+            .cardbottom img{
+                width: 30px;
+                height: 30px;
+                padding: 10px;
+            }
+            .cardbottom-left{
+                display: flex;
+                gap: 2px;
+                font-size: 15px;
+                align-items: center;
+                
+            }
+            .cardbottom-left a{
+                font-size: 12px;
+                text-decoration: none;
+            }
+            .cardbottom-right{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 5px;
+                
+                
+            }
+
+            
+
+        </style>
+    </head>
+
+
+    <body>
+
+        <div class="container">
+
+            <div class="header">
+                <h1>Your Daily Dose of Insight & Inspiration</h1>
+                <p>It fits well with your topics — gadgets, wellness, travel, time management — and gives a warm, meaningful vibe.</p>
+            </div>
+
+
+            <div class="grid">
+
+                <div class="card1">
+
+                    <!-- image part -->
+                    <div class="image">
+                        <img src="image1.jpg" alt="">
+                    </div>
+
+                    <!-- text part -->
+                     <div class="text">
+                        <h4>New Gadgets Released</h4>
+                        <p>Check out the latest tech gadgets hitting the market, from smartphones to smartwatches.</p>
+                     </div>
+
+                     <!-- bottom part -->
+                      <div class="cardbottom">
+
+                            <div class="cardbottom-left">
+
+                                <img src="profile icon.png" alt="">
+
+                                <span>
+                                    <a href="John Doe">John Doe</a>
+                                    <p>Sept 19, 2021</p>
+                                </span>
+                            </div>
+
+                            <button class="cardbottom-right">Technology</button>
+                      </div>
+
+                </div>
+
+
+                <div class="card2">
+                    
+                    
+                    <!-- image part -->
+                    <div class="image">
+                        <img src="image2.jpg" alt="">
+                    </div>
+
+                    <!-- text part -->
+                     <div class="text">
+                        <h4>Healthy Eating Tips</h4>
+                        <p>Discover simple tips for maintaining a healthy diet and making nutritious food choices.</p>
+                     </div>
+
+                     <!-- bottom part -->
+                      <div class="cardbottom">
+
+                            <div class="cardbottom-left">
+
+                                <img src="profile icon.png" alt="">
+
+                                <span>
+                                    <a href="Emily Smith">Emily Smith</a>
+                                    <p>August 5, 2021</p>
+                                </span>
+                            </div>
+
+                            <button class="cardbottom-right">Nutrition</button>
+                      </div>
+                      
+                </div>
+
+
+                <div class="card3">
+                    
+                    <!-- image part -->
+                    <div class="image">
+                        <img src="image3.jpg" alt="">
+                    </div>
+
+                    <!-- text part -->
+                     <div class="text3">
+                        <h4>Travel Bucket List</h4>
+                        <p>Explore breathtaking destinations and add them to your travel bucket list for an unforgettable adventure.</p>
+                     </div>
+
+                     <!-- bottom part -->
+                      <div class="cardbottom">
+
+                            <div class="cardbottom-left">
+
+                                <img src="profile icon.png" alt="">
+
+                                <span>
+                                    <a href="David Johnson">David Johnson</a>
+                                    <p>June 28, 2021</p>
+                                </span>
+                            </div>
+
+                            <button class="cardbottom-right">Travel</button>
+                      </div>
+                </div>
+
+                <div class="card4">
+                    <!-- image part -->
+                    <div class="image">
+                        <img src="image4.jpg" alt="">
+                    </div>
+
+                    <!-- text part -->
+                     <div class="text">
+                        <h4>Effective Time Management</h4>
+                        <p>Learn time management techniques to boost productivity and balance work and personal life.</p>
+                     </div>
+
+                     <!-- bottom part -->
+                      <div class="cardbottom">
+
+                            <div class="cardbottom-left">
+
+                                <img src="profile icon.png" alt="">
+
+                                <span>
+                                    <a href="Sarah Wilson">Sarah Wilson</a>
+                                    <p>Sept 12, 2021</p>
+                                </span>
+                            </div>
+
+                            <button class="cardbottom-right">Productivity</button>
+                      </div>
+                </div>
+
+
+                <div class="card5">
+                    <!-- image part -->
+                    <div class="image">
+                        <img src="image5.jpg" alt="">
+                    </div>
+
+                    <!-- text part -->
+                     <div class="text">
+                        <h4>Art of Mindfulness</h4>
+                        <p>Discover the power of mindfulness meditation for reducing stress and improving mental well-being.</p>
+                     </div>
+
+                     <!-- bottom part -->
+                      <div class="cardbottom">
+
+                            <div class="cardbottom-left">
+
+                                <img src="profile icon.png" alt="">
+
+                                <span>
+                                    <a href="Mark Anderson">Mark Anderson</a>
+                                    <p>July 19, 2021</p>
+                                </span>
+                            </div>
+
+                            <button class="cardbottom4-right">Mindfulness</button>
+                      </div>
+                </div>
+
+
+                <div class="card6">
+                    <!-- image part -->
+                    <div class="image">
+                        <img src="image6.jpg" alt="">
+                    </div>
+
+                    <!-- text part -->
+                     <div class="text">
+                        <h4>DIY Home Decor</h4>
+                        <p>Get creative with DIY home decor projects that will transform your living space on a budget.</p>
+                     </div>
+
+                     <!-- bottom part -->
+                      <div class="cardbottom">
+
+                            <div class="cardbottom-left">
+
+                                <img src="profile icon.png" alt="">
+
+                                <span>
+                                    <a href="Laura Brown">Laura Brown</a>
+                                    <p>August 30, 2021</p>
+                                </span>
+                            </div>
+
+                            <button class="cardbottom-right">Home Decor</button>
+                      </div>
+                </div>
+
+
+                <div class="card7">
+                    <!-- image part -->
+                    <div class="image">
+                        <img src="image7.jpg" alt="">
+                    </div>
+
+                    <!-- text part -->
+                     <div class="text">
+                        <h4>Green Energy Solutions</h4>
+                        <p>Explore eco-friendly energy solutions for a sustainable future and reducing your carbon footprint.</p>
+                     </div>
+
+                     <!-- bottom part -->
+                      <div class="cardbottom">
+
+                            <div class="cardbottom-left">
+
+                                <img src="profile icon.png" alt="">
+
+                                <span>
+                                    <a href="Michael Turner">Michael Turner</a>
+                                    <p>January 1, 2023</p>
+                                </span>
+                            </div>
+
+                            <button class="cardbottom-right">Sustainability</button>
+                      </div>
+                </div>
+
+                <div class="card8">
+                    <!-- image part -->
+                    <div class="image">
+                        <img src="image8.jpg" alt="">
+                    </div>
+
+                    <!-- text part -->
+                     <div class="text">
+                        <h4>The Power of Positivity</h4>
+                        <p>Discover how a positive mindset can improve your life and lead to greater happiness and success.</p>
+                     </div>
+
+                     <!-- bottom part -->
+                      <div class="cardbottom">
+
+                            <div class="cardbottom-left">
+
+                                <img src="profile icon.png" alt="">
+
+                                <span>
+                                    <a href="Rachel Clark">Rachel Clark</a>
+                                    <p>October 10, 2021</p>
+                                </span>
+                            </div>
+
+                            <button class="cardbottom-right">Positivity</button>
+                      </div>
+                </div>
+
+                
+            </div>
+        </div>
+    
+    </body>
+
+</html>
